@@ -1,6 +1,7 @@
 ﻿using D2Codex.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using Data;
+using Data.Interfaces;
 
 namespace D2Codex.Controllers
 {
@@ -8,43 +9,23 @@ namespace D2Codex.Controllers
     [ApiController]
     public class ItemModsController : ControllerBase
     {
-        private readonly D2ItemsContext _context;
+        private readonly IItemModsEntity _itemModsEntity;
 
-        public ItemModsController(D2ItemsContext context)
+        public ItemModsController(IItemModsEntity itemModsEntity)
         {
-            _context = context;
-        }
-
-        [HttpGet]
-        public List<ItemMods> GetAll()
-        {
-            var itemMods = _context.ItemMods
-                .Include(i => i.Item)
-                .Include(i => i.Mod)
-                .ToList();
-
-            return itemMods;
+            _itemModsEntity = itemModsEntity;
         }
 
         [HttpGet]
         public ItemMods Get(int? id)
         {
-            if (id == null || _context.ItemMods == null)
-            {
-                return new ItemMods();
-            }
+            return _itemModsEntity.Get(id);
+        }
 
-            var itemMods = _context.ItemMods
-                .Include(i => i.Item)
-                .Include(i => i.Mod)
-                .FirstOrDefault(m => m.Id == id);
-
-            if (itemMods == null)
-            {
-                return new ItemMods();
-            }
-
-            return itemMods;
+        [HttpGet]
+        public List<ItemMods> GetAll()
+        {
+            return _itemModsEntity.GetAll();
         }
     }
 }

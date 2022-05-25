@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using D2Codex.Models;
+﻿using D2Codex.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace D2Codex
+namespace Data
 {
     public partial class D2ItemsContext : DbContext
     {
