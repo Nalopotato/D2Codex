@@ -1,7 +1,6 @@
 ﻿using D2Codex.Models;
-using Microsoft.EntityFrameworkCore;
 
-namespace Data
+namespace Data.Entities
 {
     public class ItemModsEntity
     {

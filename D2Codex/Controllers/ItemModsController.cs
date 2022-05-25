@@ -1,6 +1,5 @@
 ﻿using D2Codex.Models;
 using Microsoft.AspNetCore.Mvc;
-using Data;
 using Data.Interfaces;
 
 namespace D2Codex.Controllers
