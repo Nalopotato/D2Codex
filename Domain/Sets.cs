@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace D2Codex
+namespace D2Codex.Models
 {
-    public partial class BaseTypes
+    public partial class Sets
     {
         public int Id { get; set; }
         public string Name { get; set; } = null!;
-        public bool? IsMelee { get; set; }
     }
 }

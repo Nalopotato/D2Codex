@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace D2Codex
+namespace D2Codex.Models
 {
-    public partial class Runes
+    public partial class Skills
     {
         public int Id { get; set; }
         public string? Name { get; set; }
-        public int? Lvl { get; set; }
+        public string? Class { get; set; }
     }
 }

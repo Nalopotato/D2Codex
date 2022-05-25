@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace D2Codex
+namespace D2Codex.Models
 {
     public partial class SubTypes
     {

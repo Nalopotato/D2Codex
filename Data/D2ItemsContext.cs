@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using D2Codex.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
