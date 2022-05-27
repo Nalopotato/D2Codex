@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace D2Codex.Models
+﻿namespace Domain.Models
 {
     public partial class Sets
     {

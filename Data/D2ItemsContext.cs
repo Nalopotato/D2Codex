@@ -1,4 +1,4 @@
-﻿using D2Codex.Models;
+﻿using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Data
@@ -155,13 +155,13 @@ namespace Data
                 entity.Property(e => e.Value2).HasColumnName("value2");
 
                 entity.HasOne(d => d.Item)
-                    .WithMany(p => p.TItemMods)
+                    .WithMany(p => p.ItemMods)
                     .HasForeignKey(d => d.ItemId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_T_ItemMods_T_Items");
 
                 entity.HasOne(d => d.Mod)
-                    .WithMany(p => p.TItemMods)
+                    .WithMany(p => p.ItemMods)
                     .HasForeignKey(d => d.ModId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_T_ItemMods_T_Mods");

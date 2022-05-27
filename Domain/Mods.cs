@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace D2Codex.Models
+﻿namespace Domain.Models
 {
     public partial class Mods
     {
         public Mods()
         {
-            TItemMods = new HashSet<ItemMods>();
+            ItemMods = new HashSet<ItemMods>();
         }
 
         public int Id { get; set; }
@@ -15,6 +12,6 @@ namespace D2Codex.Models
         public string? Type { get; set; }
         public string? AmountType { get; set; }
 
-        public virtual ICollection<ItemMods> TItemMods { get; set; }
+        public virtual ICollection<ItemMods> ItemMods { get; set; }
     }
 }
