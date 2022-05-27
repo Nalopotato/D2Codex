@@ -15,13 +15,10 @@ namespace Data.Entities
         {
             if (id == null || _context.ItemMods == null)
             {
-                return new ItemMods();
+                return new ItemMods(); //TODO: Handle this
             }
 
-            var itemMods = _context.ItemMods
-                .Include(i => i.Item)
-                .Include(i => i.Mod)
-                .FirstOrDefault(m => m.Id == id);
+            var itemMods = _context.ItemMods.FirstOrDefault(m => m.Id == id);
 
             if (itemMods == null)
             {
@@ -33,10 +30,7 @@ namespace Data.Entities
 
         public List<ItemMods> GetAll()
         {
-            var itemMods = _context.ItemMods
-                .Include(i => i.Item)
-                .Include(i => i.Mod)
-                .ToList();
+            var itemMods = _context.ItemMods.ToList();
 
             return itemMods;
         }
