@@ -1,4 +1,4 @@
-﻿using D2Codex.Models;
+﻿using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 using Data.Interfaces;
 

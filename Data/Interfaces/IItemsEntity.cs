@@ -1,4 +1,4 @@
-﻿using D2Codex.Models;
+﻿using Domain.Models;
 
 namespace Data.Interfaces
 {
