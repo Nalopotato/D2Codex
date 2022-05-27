@@ -4,7 +4,7 @@ using Data.Interfaces;
 
 namespace D2Codex.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/ItemMods")]
     [ApiController]
     public class ItemModsController : ControllerBase
     {
@@ -15,7 +15,7 @@ namespace D2Codex.Controllers
             _itemModsEntity = itemModsEntity;
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public ItemMods Get(int? id)
         {
             return _itemModsEntity.Get(id);
