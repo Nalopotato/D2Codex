@@ -37,7 +37,7 @@ namespace Data
         {
             modelBuilder.Entity<BaseTypes>(entity =>
             {
-                entity.ToTable("T_BaseTypes");
+                entity.ToTable("BaseTypes");
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
@@ -51,7 +51,7 @@ namespace Data
 
             modelBuilder.Entity<Items>(entity =>
             {
-                entity.ToTable("T_Items");
+                entity.ToTable("Items");
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
@@ -133,7 +133,7 @@ namespace Data
 
             modelBuilder.Entity<ItemMods>(entity =>
             {
-                entity.ToTable("T_ItemMods");
+                entity.ToTable("ItemMods");
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
@@ -169,7 +169,7 @@ namespace Data
 
             modelBuilder.Entity<ItemTypes>(entity =>
             {
-                entity.ToTable("T_ItemTypes");
+                entity.ToTable("ItemTypes");
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
@@ -180,7 +180,7 @@ namespace Data
 
             modelBuilder.Entity<Mods>(entity =>
             {
-                entity.ToTable("T_Mods");
+                entity.ToTable("Mods");
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
@@ -202,7 +202,7 @@ namespace Data
 
             modelBuilder.Entity<Runes>(entity =>
             {
-                entity.ToTable("T_Runes");
+                entity.ToTable("Runes");
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
@@ -216,7 +216,7 @@ namespace Data
 
             modelBuilder.Entity<Sets>(entity =>
             {
-                entity.ToTable("T_Sets");
+                entity.ToTable("Sets");
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
@@ -228,7 +228,7 @@ namespace Data
 
             modelBuilder.Entity<Skills>(entity =>
             {
-                entity.ToTable("T_Skills");
+                entity.ToTable("Skills");
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
@@ -245,7 +245,7 @@ namespace Data
 
             modelBuilder.Entity<SubTypes>(entity =>
             {
-                entity.ToTable("T_SubTypes");
+                entity.ToTable("SubTypes");
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
